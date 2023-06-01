@@ -50,7 +50,7 @@ INSTALLED_APPS = [
 
     # Local apps
     'books',
- 
+    'api',
 ]
 
 MIDDLEWARE = [
