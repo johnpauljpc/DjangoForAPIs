@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework.generics import ListAPIView
+from rest_framework.generics import ListAPIView, RetrieveAPIView
 from books.models import Book
 from .serializers import BookSerializer
 
@@ -8,3 +8,5 @@ from .serializers import BookSerializer
 class  BookAPIView(ListAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
+
+
