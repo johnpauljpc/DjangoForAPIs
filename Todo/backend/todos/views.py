@@ -13,3 +13,5 @@ class DetailTodo(RetrieveAPIView):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
     # lookup_field = 'title'
+
+
