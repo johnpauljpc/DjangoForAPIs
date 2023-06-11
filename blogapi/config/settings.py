@@ -37,20 +37,27 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'rest_framework',
     'rest_framework.authtoken',
     'dj_rest_auth',
+    'dj_rest_auth.registration',
     'allauth',
+    'allauth.socialaccount',
+    'allauth.account',
+    
 
 
     'blog',
 ]
 
+
+
 #permissions at project level
 REST_FRAMEWORK = {
 'DEFAULT_PERMISSION_CLASSES': [
-'rest_framework.permissions.AllowAny',
-'rest_framework.permissions.IsAdminUser'
+'rest_framework.permissions.IsAuthenticated',
+
 ],
 'DEFAULT_AUTHENTICATION_CLASSES':[
     'rest_framework.authentication.SessionAuthentication',
@@ -135,6 +142,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+SITE_ID = 1  # new
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
