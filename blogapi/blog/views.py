@@ -3,9 +3,6 @@ from .models import Post
 from rest_framework import viewsets
 from django.contrib.auth import get_user_model
 from .serializers import PostSerializer, UserSerializer
-from rest_framework.generics import  ListCreateAPIView, RetrieveUpdateDestroyAPIView
-from rest_framework.permissions import (IsAuthenticated, IsAdminUser, IsAuthenticatedOrReadOnly,
-                                         )
 from .permissions import IsAuthorOrReadOnly
 
 # Create your views here.
