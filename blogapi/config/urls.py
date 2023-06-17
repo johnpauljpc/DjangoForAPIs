@@ -14,7 +14,7 @@ urlpatterns = [
     path('rest-auth/register/', include('dj_rest_auth.registration.urls')),
     path('openapi', get_schema_view(
         title="Blog API",
-        description="A sample API for learning DRF",
+        description="Documentation of Blogapi endpoints",
         version="1.0.0"
     ), name="openapi-schema"),
     #Swagger UI API documentation link
