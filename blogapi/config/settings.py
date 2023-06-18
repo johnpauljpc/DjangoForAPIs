@@ -152,3 +152,5 @@ SITE_ID = 1  # new
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# LOGIN_URL = '/api-auth/login/'
+# LOGOUT_URL = 'rest_logout'
